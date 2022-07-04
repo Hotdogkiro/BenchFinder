@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A28CC04E430F9B1D6471BBF0 /* Pods_BenchFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E89D7350F8CCA0BE6DA140F /* Pods_BenchFinder.framework */; };
+		B354BE9E2872E6950091AFF0 /* OverpassDataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B354BE9D2872E6950091AFF0 /* OverpassDataStructures.swift */; };
 		B360390F2860BFCD00AAE37B /* BenchFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360390E2860BFCD00AAE37B /* BenchFinderApp.swift */; };
 		B36039112860BFCD00AAE37B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36039102860BFCD00AAE37B /* ContentView.swift */; };
 		B36039132860BFCE00AAE37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36039122860BFCE00AAE37B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		7E89D7350F8CCA0BE6DA140F /* Pods_BenchFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BenchFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B8FAF8751617DE24A8E4B6 /* Pods-BenchFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BenchFinder.debug.xcconfig"; path = "Target Support Files/Pods-BenchFinder/Pods-BenchFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		B354BE9D2872E6950091AFF0 /* OverpassDataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassDataStructures.swift; sourceTree = "<group>"; };
 		B360390B2860BFCD00AAE37B /* BenchFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenchFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B360390E2860BFCD00AAE37B /* BenchFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchFinderApp.swift; sourceTree = "<group>"; };
 		B36039102860BFCD00AAE37B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B36039222861C5DB00AAE37B /* LocationManager.swift */,
 				B360391E2860DAC300AAE37B /* FilterView.swift */,
 				B360391C2860D95900AAE37B /* MapView.swift */,
+				B354BE9D2872E6950091AFF0 /* OverpassDataStructures.swift */,
 				B36039122860BFCE00AAE37B /* Assets.xcassets */,
 				B36039142860BFCE00AAE37B /* Preview Content */,
 			);
@@ -117,7 +120,6 @@
 				B36039072860BFCD00AAE37B /* Sources */,
 				B36039082860BFCD00AAE37B /* Frameworks */,
 				B36039092860BFCD00AAE37B /* Resources */,
-				FADA96584F32006453C1CE90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,23 +198,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FADA96584F32006453C1CE90 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BenchFinder/Pods-BenchFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BenchFinder/Pods-BenchFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BenchFinder/Pods-BenchFinder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B354BE9E2872E6950091AFF0 /* OverpassDataStructures.swift in Sources */,
 				B36039112860BFCD00AAE37B /* ContentView.swift in Sources */,
 				B360391D2860D95900AAE37B /* MapView.swift in Sources */,
 				B36039232861C5DB00AAE37B /* LocationManager.swift in Sources */,

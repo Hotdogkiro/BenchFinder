@@ -6,41 +6,50 @@
 //
 
 import SwiftUI
-import SwiftOverpassAPI
+import MapKit
 
 struct SearchButtonView: View {
     @EnvironmentObject var modelData: ModelData
     
     private func fetchData(){
-        let boundingBoxString = OPBoundingBox(region: modelData.region).toString()
+        let boundingBoxString = OverpassBoundingBox(region: modelData.locationManager.region)
         let query = """
                 data=[out:json];
-                node["network"="BART"]
-                ["railway"="stop"]
-                \(boundingBoxString)
-                ->.bartStops;
-                (
-                way(around.bartStops:200)["amenity"="cinema"];
-                node(around.bartStops:200)["amenity"="cinema"];
-                );
+                node["amenity"="bench"]
+                \(boundingBoxString);
                 out center;
                 """
-        let client = OPClient() //1
-        client.endpoint = .custom(urlString: "https://overpass-api.de/api/interpreter") //2
-        client.fetchElements(query: query) { result in
-            switch result {
-            case .failure(let error):
-                print(error.localizedDescription)
-            case .success(let elements):
-                print("elements:\(elements)") // Do something with returned the elements
+       
+        var url = URLRequest(url: URL(string: "https://overpass-api.de/api/interpreter")!)
+        url.httpBody = query.data(using: .utf8)
+        url.httpMethod = "post"
+        let task = URLSession.shared.dataTask(with: url) {data,resp,error in
+            guard let data = data, error == nil else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any]
+                let elements = json?["elements"] as? [[String:Any]] ?? []
+                var nodes = [Node]()
+                for element in elements {
+                    nodes.append(Node(lat: element["lat"] as! Double, lon: element["lon"] as! Double))
+                }
+                DispatchQueue.main.async {
+                    modelData.nodes = nodes
+                    modelData.loadingData = false
+                }
+            } catch {
+                print(error)
+                DispatchQueue.main.async {
+                    modelData.loadingData = false
+                }
             }
         }
+        modelData.loadingData = true
+        task.resume()
     }
 
     var body: some View {
         Button(action: {
             fetchData()
-            print("Modeldata: \(modelData.region)")
         }){
             Image(systemName: "magnifyingglass")
                 .padding()

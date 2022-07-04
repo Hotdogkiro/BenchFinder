@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
-
+    
     var body: some View {
         ZStack{
             MapView()
@@ -27,6 +27,9 @@ struct ContentView: View {
                     SearchButtonView()
                         .padding()
                 }
+            }
+            if modelData.loadingData {
+                Label("Loading", systemImage: "circle.dotted")
             }
         }
     }

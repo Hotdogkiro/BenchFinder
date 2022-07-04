@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct BenchFinderApp: App {
     @StateObject private var modelData = ModelData()
-
     var body: some Scene {
         WindowGroup {
             ContentView()
