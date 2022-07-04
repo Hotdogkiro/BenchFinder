@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var modelData: ModelData
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            MapView()
+                .ignoresSafeArea(edges: .top)
+            VStack{
+                ForEach(modelData.filters){filter in
+                    HStack{
+                        filter
+                        Spacer()
+                    }
+                }
+                Spacer()
+                HStack{
+                    Spacer()
+                    SearchButtonView()
+                        .padding()
+                }
+            }
+        }
     }
 }
 

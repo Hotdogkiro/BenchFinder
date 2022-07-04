@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A28CC04E430F9B1D6471BBF0 /* Pods_BenchFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E89D7350F8CCA0BE6DA140F /* Pods_BenchFinder.framework */; };
 		B360390F2860BFCD00AAE37B /* BenchFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360390E2860BFCD00AAE37B /* BenchFinderApp.swift */; };
 		B36039112860BFCD00AAE37B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36039102860BFCD00AAE37B /* ContentView.swift */; };
 		B36039132860BFCE00AAE37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36039122860BFCE00AAE37B /* Assets.xcassets */; };
 		B36039162860BFCE00AAE37B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36039152860BFCE00AAE37B /* Preview Assets.xcassets */; };
+		B360391D2860D95900AAE37B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360391C2860D95900AAE37B /* MapView.swift */; };
+		B360391F2860DAC300AAE37B /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360391E2860DAC300AAE37B /* FilterView.swift */; };
+		B36039212861B12500AAE37B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36039202861B12500AAE37B /* ModelData.swift */; };
+		B36039232861C5DB00AAE37B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36039222861C5DB00AAE37B /* LocationManager.swift */; };
+		B360392E2863B50900AAE37B /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360392D2863B50900AAE37B /* SearchButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E89D7350F8CCA0BE6DA140F /* Pods_BenchFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BenchFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B8FAF8751617DE24A8E4B6 /* Pods-BenchFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BenchFinder.debug.xcconfig"; path = "Target Support Files/Pods-BenchFinder/Pods-BenchFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		B360390B2860BFCD00AAE37B /* BenchFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenchFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B360390E2860BFCD00AAE37B /* BenchFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchFinderApp.swift; sourceTree = "<group>"; };
 		B36039102860BFCD00AAE37B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B36039122860BFCE00AAE37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B36039152860BFCE00AAE37B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B360391C2860D95900AAE37B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B360391E2860DAC300AAE37B /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		B36039202861B12500AAE37B /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		B36039222861C5DB00AAE37B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B360392D2863B50900AAE37B /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
+		FD624C1CAED94648B9FEAB29 /* Pods-BenchFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BenchFinder.release.xcconfig"; path = "Target Support Files/Pods-BenchFinder/Pods-BenchFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28CC04E430F9B1D6471BBF0 /* Pods_BenchFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AAC0098F871018BE2501B49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E89D7350F8CCA0BE6DA140F /* Pods_BenchFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E3302CD1E60D4AC7AA90E21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7B8FAF8751617DE24A8E4B6 /* Pods-BenchFinder.debug.xcconfig */,
+				FD624C1CAED94648B9FEAB29 /* Pods-BenchFinder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B36039022860BFCD00AAE37B = {
 			isa = PBXGroup;
 			children = (
 				B360390D2860BFCD00AAE37B /* BenchFinder */,
 				B360390C2860BFCD00AAE37B /* Products */,
+				6E3302CD1E60D4AC7AA90E21 /* Pods */,
+				4AAC0098F871018BE2501B49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,7 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				B360390E2860BFCD00AAE37B /* BenchFinderApp.swift */,
+				B360392D2863B50900AAE37B /* SearchButtonView.swift */,
 				B36039102860BFCD00AAE37B /* ContentView.swift */,
+				B36039202861B12500AAE37B /* ModelData.swift */,
+				B36039222861C5DB00AAE37B /* LocationManager.swift */,
+				B360391E2860DAC300AAE37B /* FilterView.swift */,
+				B360391C2860D95900AAE37B /* MapView.swift */,
 				B36039122860BFCE00AAE37B /* Assets.xcassets */,
 				B36039142860BFCE00AAE37B /* Preview Content */,
 			);
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B36039192860BFCE00AAE37B /* Build configuration list for PBXNativeTarget "BenchFinder" */;
 			buildPhases = (
+				8E7831F65B6D25B7FF4229A9 /* [CP] Check Pods Manifest.lock */,
 				B36039072860BFCD00AAE37B /* Sources */,
 				B36039082860BFCD00AAE37B /* Frameworks */,
 				B36039092860BFCD00AAE37B /* Resources */,
+				FADA96584F32006453C1CE90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +173,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E7831F65B6D25B7FF4229A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BenchFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FADA96584F32006453C1CE90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BenchFinder/Pods-BenchFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BenchFinder/Pods-BenchFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BenchFinder/Pods-BenchFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B36039072860BFCD00AAE37B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B36039112860BFCD00AAE37B /* ContentView.swift in Sources */,
+				B360391D2860D95900AAE37B /* MapView.swift in Sources */,
+				B36039232861C5DB00AAE37B /* LocationManager.swift in Sources */,
+				B36039212861B12500AAE37B /* ModelData.swift in Sources */,
 				B360390F2860BFCD00AAE37B /* BenchFinderApp.swift in Sources */,
+				B360391F2860DAC300AAE37B /* FilterView.swift in Sources */,
+				B360392E2863B50900AAE37B /* SearchButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,14 +349,18 @@
 		};
 		B360391A2860BFCE00AAE37B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B8FAF8751617DE24A8E4B6 /* Pods-BenchFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BenchFinder/Preview Content\"";
+				DEVELOPMENT_TEAM = 9MUNX697CZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow Access to Location?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow Access to Location?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -289,14 +381,18 @@
 		};
 		B360391B2860BFCE00AAE37B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD624C1CAED94648B9FEAB29 /* Pods-BenchFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BenchFinder/Preview Content\"";
+				DEVELOPMENT_TEAM = 9MUNX697CZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow Access to Location?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow Access to Location?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
